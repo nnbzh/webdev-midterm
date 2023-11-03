@@ -1,0 +1,14 @@
+<div *ngFor="let post of posts" class="border border-bottom border-top m-0 p-0">
+  <div class="card border-0">
+    <div class="card-body">
+      <p class="card-text">{{ post.content }}</p>
+      <div class="card-footer mb-1">
+        <p>Likes: {{ post.likes }}</p>
+        <p>Author: {{ post.user?.fullName }}</p>
+        <p>Username: {{ post.user?.username }}</p>
+        <p>Posted at: {{ post.posted_at }}</p>
+      </div>
+      <a href="#" class="btn btn-primary" (click)="like(post.id)">Like</a>
+    </div>
+  </div>
+</div>
